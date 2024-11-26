@@ -36,6 +36,18 @@ public:
         data[size++] = value;
     }
 
+    void removeElement() 
+    {
+        if (size > 0)
+        {
+            size--; 
+        } 
+        else
+        {
+            std::cerr << "Erro: a lista está vazia!\n";
+        }
+    }
+
     void printList() const 
     {
         std::cout << "Lista: ";
@@ -54,6 +66,11 @@ int main()
     for (int i = 0; i < 60; i++) 
     {
         list.addElement(i + 1);
+    }
+    
+    for (int i = 0; i < 10; i++) 
+    {
+        list.removeElement();
     }
 
     list.printList();
