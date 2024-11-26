@@ -29,6 +29,7 @@ public:
 
     void addElement(int value) 
     {
+        validateList();
         if (size == capacity) 
         {
             resize(capacity * 2);
@@ -52,8 +53,23 @@ public:
         }
     }
 
+void validateList() const 
+    {
+        if (data == nullptr) 
+        {
+            std::cerr << "Erro: ponteiro de dados é nulo.\n";
+            exit(1);
+        }
+        if (capacity < size) 
+        {
+            std::cerr << "Erro: capacidade é menor que o número de elementos.\n";
+            exit(1);
+        }
+    }
+
     void printList() const 
     {
+        validateList();
         std::cout << "Lista: ";
         for (int i = 0; i < size; i++) 
         {
@@ -84,6 +100,8 @@ int main()
         list.removeElement();
     }
     list.printList();
+
+    list.validateList();
 
     return 0;
 }
