@@ -40,7 +40,11 @@ public:
     {
         if (size > 0)
         {
-            size--; 
+            size--;
+            if (size > 0 && size <= capacity / 4) 
+            {
+                resize(capacity / 2);
+            }
         } 
         else
         {
@@ -67,12 +71,18 @@ int main()
     {
         list.addElement(i + 1);
     }
+    list.printList();
     
     for (int i = 0; i < 10; i++) 
     {
         list.removeElement();
     }
+    list.printList();
 
+    for (int i = 0; i < 50; i++) 
+    {
+        list.removeElement();
+    }
     list.printList();
 
     return 0;
