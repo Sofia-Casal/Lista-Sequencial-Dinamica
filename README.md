@@ -12,4 +12,8 @@ Este projeto implementa uma lista dinâmica em C++ que suporta redimensionamento
 - Implementada a função para remover o último elemento da lista.
 - Adicionados testes básicos para verificar a remoção no programa principal.
 
+### Versão 3: Redimensionamento para redução
+- Adicionada lógica para reduzir a capacidade da lista quando o número de elementos cair para 25% da capacidade atual.
+- Incluídos testes para verificar o redimensionamento dinâmico.
+
 
