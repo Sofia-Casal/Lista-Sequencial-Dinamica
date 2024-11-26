@@ -7,3 +7,9 @@ Este projeto implementa uma lista dinâmica em C++ que suporta redimensionamento
 ### Versão 1: Implementação inicial
 - Criada a estrutura base da lista dinâmica.
 - Implementadas as funções para inicializar a lista, adicionar elementos e exibir a lista.
+
+### Versão 2: Adicionada a função de remoção
+- Implementada a função para remover o último elemento da lista.
+- Adicionados testes básicos para verificar a remoção no programa principal.
+
+
