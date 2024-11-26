@@ -1,6 +1,6 @@
 # Lista Dinâmica com Redimensionamento Automático
 
-Este projeto implementa uma lista dinâmica em C++ que suporta redimensionamento automático. A lista começa com uma capacidade inicial de 50 elementos e pode expandir ou reduzir sua capacidade dinamicamente, conforme elementos são adicionados ou removidos.
+Este trabalho implementa uma lista dinâmica em C++ que suporta redimensionamento automático. A lista começa com uma capacidade inicial de 50 elementos e pode expandir ou reduzir sua capacidade automaticamente, conforme elementos são adicionados ou removidos.
 
 ## Histórico de Atualizações
 
@@ -15,5 +15,10 @@ Este projeto implementa uma lista dinâmica em C++ que suporta redimensionamento
 ### Versão 3: Redimensionamento para redução
 - Adicionada lógica para reduzir a capacidade da lista quando o número de elementos cair para 25% da capacidade atual.
 - Incluídos testes para verificar o redimensionamento dinâmico.
+
+### Versão 4: Validações e melhorias
+- Adicionadas verificações para garantir a integridade da lista (por exemplo, evitar remoção de elementos em uma lista vazia).
+- Incluida validação para manter a capacidade mínima de 50 elementos.
+
 
 
