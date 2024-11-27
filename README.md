@@ -20,5 +20,48 @@ Este trabalho implementa uma lista dinâmica em C++ que suporta redimensionament
 - Adicionadas verificações para garantir a integridade da lista (por exemplo, evitar remoção de elementos em uma lista vazia).
 - Incluida validação para manter a capacidade mínima de 50 elementos.
 
+### Versão 5: Testes detalhados
+- Criado um conjunto de testes no programa principal para verificar o comportamento em cenários variados.
+- Testes incluem adição em massa, remoção em massa e redimensionamento automático.
+
+---
+
+## Como o Programa Funciona
+
+### **Inicialização:**
+- A lista é criada com uma capacidade inicial de 50.
+
+### **Adição de Elementos (`addElement`):**
+- Adiciona novos elementos ao final da lista.
+- Redimensiona a lista automaticamente, dobrando sua capacidade quando ela está cheia.
+
+### **Remoção de Elementos (`removeElement`):**
+- Retira o último elemento da lista.
+- A capacidade diminui para metade se a contagem de elementos restantes for igual ou menor que 25% da capacidade atual (a capacidade mínima que deve ser retida é 50).
+
+### **Validação da Lista (`validateList`):**
+- Faz a verificação da integridade da lista, ou seja, uma verificação de que o ponteiro de dados não é NULL e a capacidade nunca é menor que o número de elementos.
+
+### **Impressão da Lista (`printList`):**
+- Mostra todos os elementos armazenados e a capacidade atual da lista.
+
+### **Testes (`testAddElements` e `testRemoveElements`):**
+- Funções auxiliares para adicionar ou remover múltiplos elementos de uma vez, testando diferentes cenários.
+
+### **Teste de Comportamento no `main()`:**
+1. Adiciona 100 elementos e imprime a lista.
+2. Remove 80 elementos e verifica a redução de capacidade.
+3. Adiciona mais 30 elementos e imprime a lista novamente.
+4. Remove todos os elementos restantes e verifica a integridade da lista.
+
+---
+
+## Uso de Memória
+- A lista utiliza memória dinâmica (funções `malloc` e `realloc`) para armazenar os elementos, garantindo eficiência no uso de recursos.
+- A capacidade nunca é menor que 50, evitando problemas de redimensionamento excessivo.
+
+---
+
+
 
 
