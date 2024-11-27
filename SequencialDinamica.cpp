@@ -9,7 +9,8 @@ private:
     int capacity;
 
     void resize(int newCapacity) 
-    {
+    { 
+        if (newCapacity < 50) newCapacity = 50;
         data = (int *)realloc(data, newCapacity * sizeof(int));
         capacity = newCapacity;
     }
@@ -55,7 +56,7 @@ public:
 
 void validateList() const 
     {
-        if (data == nullptr) 
+        if (data == NULL) 
         {
             std::cerr << "Erro: ponteiro de dados é nulo.\n";
             exit(1);
@@ -77,32 +78,39 @@ void validateList() const
         }
         std::cout << "\nCapacidade: " << capacity << "\n";
     }
+
+    void testAddElements(int count) 
+    {
+        std::cout << "Adicionando " << count << " elementos:\n";
+        for (int i = 0; i < count; i++) 
+        {
+            addElement(i + 1);
+        }
+        printList();
+    }
+
+    void testRemoveElements(int count) 
+    {
+        std::cout << "Removendo " << count << " elementos:\n";
+        for (int i = 0; i < count; i++) 
+        {
+            removeElement();
+        }
+        printList();
+    }
 };
 
 int main() 
 {
     DynamicList list;
 
-    for (int i = 0; i < 60; i++) 
-    {
-        list.addElement(i + 1);
-    }
-    list.printList();
-    
-    for (int i = 0; i < 10; i++) 
-    {
-        list.removeElement();
-    }
-    list.printList();
+    list.testAddElements(100);
 
-    for (int i = 0; i < 50; i++) 
-    {
-        list.removeElement();
-    }
-    list.printList();
+    list.testRemoveElements(80);
 
-    list.validateList();
+    list.testAddElements(30);
+
+list.testRemoveElements(list.getSize());
 
     return 0;
 }
-
